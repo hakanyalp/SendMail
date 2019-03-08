@@ -8,6 +8,7 @@ Müşteri mail adresleriniz var ve toplu olarak mail gönderimi yapmak istiyorsa
 Bunun için aşağıdaki linkleri inceleyebilirsiniz:
 
 Gmail için; https://support.google.com/accounts/answer/6010255?hl=tr
+
 Outlook için; https://answers.microsoft.com/tr-tr/outlook_com/forum/all/daha-az-g%C3%BCvenli-uygulamada-hotmail-a%C3%A7ma/000e4871-a374-42fa-90ae-c9ce41f803da
 
 Ardından mailde html olarak güzel bir veri göndermek için aşağıdaki siteden kendi şablonunuzu oluşurabilirsiniz, (gayet kaliteli bir sitedir);
