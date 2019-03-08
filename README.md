@@ -18,4 +18,4 @@ https://beefree.io/
 Bu siteden oluşturduğunuz ya da kendi tasarımınız olan html dosyasını proje içerisindeki "/bin/Debug" klasörüne atmanız gerekiyor.
 Aynı şekilde müşterilerinizin olduğu mail adreslerini "mail_list.txt" dosyasına kaydedip proje içerisindeki "/bin/Debug" klasörüne atmanız gerekiyor.
 
-Programı açtığınızda otomatik olarak bu dosyalara erişecektir.
+Programı açtığınızda otomatik olarak bu dosyalara erişecektir ve seçili olan mail adreslerinin tümüne mail gönderecektir.
