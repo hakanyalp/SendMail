@@ -31,9 +31,6 @@ namespace mail_gonder
                 {
                     string text = reader.ReadLine();
 
-                    // txt dosyamdaki maillerde ilk ve son 2 karakter silinmesi gerekiyor.
-                    text = text.Substring(1, text.Length - 2);
-
                     bool repeat_control = false;
                     bool err_control = false;
                     for (int i = 0; i < checkedListBox1.Items.Count; i++)

@@ -1,5 +1,5 @@
-"birisi@gmail.com"
-"ikincisi@gmail.com"
-"ucuncusu@gmail.com"
-"dorduncusu@gmail.com"
-"besincisi@gmail.com"
+birisi@gmail.com
+ikincisi@gmail.com
+ucuncusu@gmail.com
+dorduncusu@gmail.com
+besincisi@gmail.com
