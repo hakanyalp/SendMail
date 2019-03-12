@@ -127,7 +127,7 @@
             // 
             // numericUpDown1
             // 
-            this.numericUpDown1.Location = new System.Drawing.Point(166, 544);
+            this.numericUpDown1.Location = new System.Drawing.Point(166, 534);
             this.numericUpDown1.Name = "numericUpDown1";
             this.numericUpDown1.Size = new System.Drawing.Size(56, 26);
             this.numericUpDown1.TabIndex = 8;
@@ -136,7 +136,7 @@
             // 
             // label1
             // 
-            this.label1.Location = new System.Drawing.Point(12, 534);
+            this.label1.Location = new System.Drawing.Point(12, 524);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(154, 47);
             this.label1.TabIndex = 9;
@@ -144,7 +144,7 @@
             // 
             // label2
             // 
-            this.label2.Location = new System.Drawing.Point(316, 531);
+            this.label2.Location = new System.Drawing.Point(316, 521);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(201, 26);
             this.label2.TabIndex = 10;
@@ -152,7 +152,7 @@
             // 
             // lblSonMailTarihi
             // 
-            this.lblSonMailTarihi.Location = new System.Drawing.Point(316, 555);
+            this.lblSonMailTarihi.Location = new System.Drawing.Point(316, 545);
             this.lblSonMailTarihi.Name = "lblSonMailTarihi";
             this.lblSonMailTarihi.Size = new System.Drawing.Size(201, 26);
             this.lblSonMailTarihi.TabIndex = 11;
@@ -162,7 +162,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(550, 586);
+            this.ClientSize = new System.Drawing.Size(549, 581);
             this.Controls.Add(this.lblSonMailTarihi);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
@@ -177,7 +177,7 @@
             this.Controls.Add(this.button1);
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "Mail Gönderme";
+            this.Text = "Bülten Mail Gönderme";
             this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
             this.ResumeLayout(false);

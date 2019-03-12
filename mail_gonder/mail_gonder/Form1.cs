@@ -17,19 +17,25 @@ namespace mail_gonder
             InitializeComponent();
         }
 
+        string mail_list = "mail_list.txt";     // default maillerin okunduğu dosya adı
+
         private void Form1_Load(object sender, EventArgs e)
         {
+            //WindowState = FormWindowState.Minimized;
             MaximizeBox = false;
-            numericUpDown1.Value = wait_time / 1000;    // milisaniyeyi saniye cinsinden elde edebilmek için 1000e bölünür
+            numericUpDown1.Value = wait_time / 1000;
 
             try
             {
-                StreamReader reader = new StreamReader("./mail_list.txt");
+                StreamReader reader = new StreamReader("./" + mail_list);
                 int repeat_count = 0;
                 List<string> err_mail = new List<string>();     //txt'deki hatalı mail adresleri burada tutulup log'lanacak
                 while (!reader.EndOfStream)
                 {
                     string text = reader.ReadLine();
+
+                    // txt dosyamdaki maillerde ilk ve son 2 karakter silinmesi gerekiyor.
+                    text = text.Substring(1, text.Length - 2);
 
                     bool repeat_control = false;
                     bool err_control = false;
@@ -90,15 +96,15 @@ namespace mail_gonder
 
                         string toEmail;
                         toEmail = checkedListBox1.CheckedItems[i].ToString();
-                        string subject = "Otomatik Mail";
+                        string subject = "Otomatik mail";
                         string emailBody = "";
 
                         // mail gönderilecek döküman
                         string fileName = "mail" + ".html";
                         // Read using File.OpenText
-                        if (System.IO.File.Exists(fileName))
+                        if (File.Exists(fileName))
                         {
-                            using (System.IO.StreamReader sr = System.IO.File.OpenText(fileName))
+                            using (StreamReader sr = File.OpenText(fileName))
                             {
                                 String input;
                                 while ((input = sr.ReadLine()) != null)
@@ -117,16 +123,20 @@ namespace mail_gonder
                         mailMessage.IsBodyHtml = true;
 
                         mailMessage.BodyEncoding = UTF8Encoding.UTF8;
+                        //mailMessage.CC.Add("support@iksap.com");
+                        //mailMessage.CC.Add("slarapor@iksap.com");
+
+                        //Info(emailBody);
 
                         client.Send(mailMessage);
                         System.Threading.Thread.Sleep(wait_time);
 
-                        lblSonMailTarihi.Text = DateTime.Now.ToString();
                     }
-                    catch(Exception ex)
+                    catch
                     {
                         MessageBox.Show(checkedListBox1.CheckedItems[i].ToString() + " kişisine mail gönderme başarısız oldu!");
                     }
+                    lblSonMailTarihi.Text = DateTime.Now.ToString();
                 }
             }
             else if (dialogResult == DialogResult.No)
@@ -154,6 +164,9 @@ namespace mail_gonder
                 while (!reader.EndOfStream)
                 {
                     string text = reader.ReadLine();
+
+                    // txt dosyamdaki maillerde ilk ve son 2 karakter silinmesi gerekiyor.
+                    text = text.Substring(1, text.Length - 2);
 
                     bool repeat_control = false;
                     bool err_control = false;
@@ -221,7 +234,7 @@ namespace mail_gonder
             //seçilenleri sil
             int count = checkedListBox1.CheckedItems.Count;
             List<string> deleting = new List<string>();
-            for (int i = 0; i < checkedListBox1.CheckedItems.Count; i++)
+            for (int i = 0; i < checkedListBox1.CheckedItems.Count; i++)    // silerken karışmaması için seçilen elemanlar farklı listeye atılıyor
             {
                 deleting.Add(checkedListBox1.CheckedItems[i].ToString());
             }
@@ -230,6 +243,17 @@ namespace mail_gonder
             {
                 checkedListBox1.Items.Remove(deleting[i]);
                 delete_control = true;
+            }
+            if (deleting.Count > 0)
+            {
+                TextWriter tw = new StreamWriter("./" + mail_list);
+                tw.Write("");
+                tw.Close();
+                for (int i = 0; i < checkedListBox1.Items.Count - 1; i++)
+                {
+                    File.AppendAllText("./" + mail_list, "\"" + checkedListBox1.Items[i] + "\"" + Environment.NewLine);   // burada mail formatına uygun olması için mail adresinin başına ve sonuna " işareti eklendi ve o şekilde txt'ye yazıldı
+                }
+                File.AppendAllText("./" + mail_list, "\"" + checkedListBox1.Items[checkedListBox1.Items.Count - 1] + "\"");     // sonuncuda boşluk eklememesi için ayrı satırda ekleniyor
             }
             if (!delete_control)
                 MessageBox.Show("Silinecek eleman seçmelisiniz");
@@ -282,6 +306,9 @@ namespace mail_gonder
                 {
                     checkedListBox1.Items.Add(data);
                     textBox1.Clear();
+
+                    // txt dosyasına mail adresi ekleniyor
+                    File.AppendAllText("./" + mail_list, Environment.NewLine + "\"" + data + "\"");   // burada mail formatına uygun olması için mail adresinin başına ve sonuna " işareti eklendi ve o şekilde txt'ye yazıldı
                 }
                 else
                     MessageBox.Show("Kişi zaten listede kayıtlı!");

@@ -1,5 +1,6 @@
-birisi@gmail.com
-ikincisi@gmail.com
-ucuncusu@gmail.com
-dorduncusu@gmail.com
-besincisi@gmail.com
+"birinci_mail_adresi@deneme.com"
+"ikinci_mail_adresi@deneme.com"
+"ucuncu_mail_adresi@deneme.com"
+"dorduncu_mail_adresi@deneme.com"
+"besinci_mail_adresi@deneme.com"
+"altinci_mail_adresi@iksap.com"

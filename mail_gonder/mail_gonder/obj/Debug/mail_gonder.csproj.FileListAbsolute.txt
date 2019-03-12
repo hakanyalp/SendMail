@@ -8,6 +8,16 @@ C:\Users\Hakan\source\repos\mail_gonder\mail_gonder\obj\Debug\mail_gonder.csproj
 C:\Users\Hakan\source\repos\mail_gonder\mail_gonder\obj\Debug\mail_gonder.csproj.CoreCompileInputs.cache
 C:\Users\Hakan\source\repos\mail_gonder\mail_gonder\obj\Debug\mail_gonder.exe
 C:\Users\Hakan\source\repos\mail_gonder\mail_gonder\obj\Debug\mail_gonder.pdb
+C:\Users\Hakan\source\repos\mail_gonder - Kopya\mail_gonder\bin\Debug\mail_gonder.exe.config
+C:\Users\Hakan\source\repos\mail_gonder - Kopya\mail_gonder\bin\Debug\mail_gonder.exe
+C:\Users\Hakan\source\repos\mail_gonder - Kopya\mail_gonder\bin\Debug\mail_gonder.pdb
+C:\Users\Hakan\source\repos\mail_gonder - Kopya\mail_gonder\obj\Debug\mail_gonder.csprojAssemblyReference.cache
+C:\Users\Hakan\source\repos\mail_gonder - Kopya\mail_gonder\obj\Debug\mail_gonder.Form1.resources
+C:\Users\Hakan\source\repos\mail_gonder - Kopya\mail_gonder\obj\Debug\mail_gonder.Properties.Resources.resources
+C:\Users\Hakan\source\repos\mail_gonder - Kopya\mail_gonder\obj\Debug\mail_gonder.csproj.GenerateResource.cache
+C:\Users\Hakan\source\repos\mail_gonder - Kopya\mail_gonder\obj\Debug\mail_gonder.csproj.CoreCompileInputs.cache
+C:\Users\Hakan\source\repos\mail_gonder - Kopya\mail_gonder\obj\Debug\mail_gonder.exe
+C:\Users\Hakan\source\repos\mail_gonder - Kopya\mail_gonder\obj\Debug\mail_gonder.pdb
 C:\Users\Hakan\Documents\GitHub\SendMail\mail_gonder\mail_gonder\bin\Debug\mail_gonder.exe.config
 C:\Users\Hakan\Documents\GitHub\SendMail\mail_gonder\mail_gonder\bin\Debug\mail_gonder.exe
 C:\Users\Hakan\Documents\GitHub\SendMail\mail_gonder\mail_gonder\bin\Debug\mail_gonder.pdb
